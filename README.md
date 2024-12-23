@@ -17,14 +17,21 @@
 git clone https://github.com/git/git.git
 ```
 
-Сборка проекта осуществляется в командной строке с ключами --visualizer, --repo, --file-hash для пути к программе для визуализации графов, репозитория и файлы с хэш-значением соответственно.
+В папке репозитория ввести команду,
 ```
-python main.py --visualizer /path/to/mmdc --repo /path/to/git --file-hash <hash>
+git hash-object <file_path>
+```
+где <file_path> - путь до необходимого файла.
+
+Скопировать хэш-значение, вставить в файл в корне проекта hash_code.txt
+
+Сборка проекта осуществляется в командной строке с ключами --visualizer, --repo, --file_hash для пути к программе для визуализации графов, репозитория и файла с хэш-значением соответственно.
+```
+python main.py --visualizer .\mermaid\mmdc.cmd --repo .\repo\learn-to-learn --file_hash hash_code.txt
 ```
 
 ## 4. Примеры использования
-![alt text](image.png)
-![alt text](image-1.png)
-## 5. Результаты прогона тестов
 
-python main.py --visualizer mermaid/mmdc --repo /path/to/git --file-hash <hash>
+
+
+
